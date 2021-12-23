@@ -55,27 +55,28 @@ const Dropdown = () => {
 	};
 
 	const handleSelectFont = (e) => {
-		const font = e.target.files[0];
-		const fontName = font.name.split('.')[0];
+		const fontFile = e.target.files[0];
+		const fontName = fontFile.name.split('.')[0];
 
-		fontFileReader(font, (src) => {
+		fontFileReader(fontFile, (src) => {
 			setFont({
 				label: fontName,
 				value: fontName,
 				color: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
 				servedSrc: src,
 			});
-
-			const { value, servedSrc } = font;
-			loadFontPreview(value, servedSrc);
 		});
 	};
 
 	useEffect(() => {
 		let timeOut;
-		if (font) {
+		if (Object.values(font).length) {
+			const { value, servedSrc } = font;
+
 			setOptions([...options, font]);
 			setDefValue(font);
+			loadFontPreview(value, servedSrc);
+
 			timeOut = setTimeout(() => {
 				reset();
 			}, 2000);
@@ -95,7 +96,6 @@ const Dropdown = () => {
 			<Select
 				value={options.filter((option) => option.value === defValue.value)}
 				label="Single Font"
-				//onChange={(e) => setDefValue(e)}
 				options={options}
 				styles={colourStyles}
 			/>
