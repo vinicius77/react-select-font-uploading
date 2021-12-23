@@ -1,0 +1,22 @@
+{
+  "name": "react-select-font-uploading",
+  "version": "0.0.7",
+  "description": "A minimal example to upload and serve font files",
+  "main": "index.js",
+  "dependencies": {
+    "chroma-js": "2.0.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-select": "3.0.4"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
