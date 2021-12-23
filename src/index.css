@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+h2 {
+  color: coral;
+  font-family: "Tahoma"
+}
+
+p {
+  padding: 5px 0px 5px 10px;
+  letter-spacing: 2px;
+}
