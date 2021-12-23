@@ -6,7 +6,7 @@ const OptionsList = ({ options, onClick }) => {
 			{options.map((option) => (
 				<p
 					key={option.value}
-					style={{ fontFamily: option.value, color: option.color }}
+					style={{ fontFamily: option.value, color: option.color, fontSize: '25px' }}
 					onClick={() => onClick(option)}
 				>
 					{option.value}
